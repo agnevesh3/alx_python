@@ -1,16 +1,16 @@
-##Copy-cut-past
-word = "Holberton"
-word_first_3 = word[:3]
-word_last_2 = word[7:]
-middle_word = word[1:8]
-print("First 3 letters: {}".format(word_first_3))
-print("Last 2 letters: {}".format(word_last_2))
-print("Middle word: {}".format(middle_word))
+word1, word2 = "Holberton", "School"
 
-word_2 = "school"
-word_first_3 = word_2[:3]
-word_last_2 = word_2[4:]
-middle_word = word_2[1:5]
-print("First 3 letters: {}".format(word_first_3))
-print("Last 2 letters: {}".format(word_last_2))
-print("Middle word: {}".format(middle_word))
+# Extracting substrings from word1 and word2
+word1_first_3, word1_last_2, word1_middle = word1[:3], word1[-2:], word1[1:-1]
+word2_first_3, word2_last_2, word2_middle = word2[:3], word2[-2:], word2[1:-1]
+
+print(
+    "First 3 letters of word1: {}\nLast 2 letters of word1: {}\nMiddle word of word1: {}".format(
+        word1_first_3, word1_last_2, word1_middle
+    )
+)
+print(
+    "First 3 letters of word2: {}\nLast 2 letters of word2: {}\nMiddle word of word2: {}".format(
+        word2_first_3, word2_last_2, word2_middle
+    )
+)
