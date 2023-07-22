@@ -1,11 +1,9 @@
-word1 = "Holberton"
+word = "Holberton"
 
-word1_first_3 = word1[:3]
-word1_last_2 = word1[-2:]
-word1_middle = word1[1:-1]
+word_first_3 = word[:3]
+word_last_2 = word[-2:]
+word_middle = word[1:-1]
 
-print(
-    "First 3 letters of word1: {}\nLast 2 letters of word1: {}\nMiddle word of word1: {}".format(
-        word1_first_3, word1_last_2, word1_middle
-    )
-)
+print("First 3 letters: {}".format(word_first_3))
+print("Last 2 letters: {}".format(word_last_2))
+print("Middle word: {}".format(word_middle))
