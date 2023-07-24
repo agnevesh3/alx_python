@@ -5,7 +5,7 @@ def add(x, y):
     return add(x, y)
 
 
-print(add(1, 2))
-print(add(100, -2))
-print(add(-100, -2))
-print(add(0, 0))
+# print(add(1, 2))
+# print(add(100, -2))
+# print(add(-100, -2))
+# print(add(0, 0))
