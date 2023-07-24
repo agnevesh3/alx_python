@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 def my_power(x, y):
     a = x**y
-    # pow = __import__("math").pow
     return a
 
 
