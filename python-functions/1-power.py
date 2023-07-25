@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 def my_power(x, y):
-    a = x**y
-    return a
+    try:
+        pow = __import__("1-power").pow
+    except:
+        a = x**y
+        return a
 
 
 # print(pow(2, 2))
