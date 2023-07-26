@@ -9,3 +9,4 @@ def safe_print_division(a, b):
     finally:
         print("Inside result:", division)
         print("{} / {} = {}".format(a, b, division))
+    return division
