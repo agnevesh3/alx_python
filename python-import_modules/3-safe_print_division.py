@@ -8,5 +8,4 @@ def safe_print_division(a, b):
         division = None
     finally:
         print("Inside result:", division)
-        print("{} / {} = {}".format(a, b, division))
-    return division
+    return print("{} / {} = {}".format(a, b, division))
