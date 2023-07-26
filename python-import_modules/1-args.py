@@ -10,3 +10,6 @@ if __name__ == "__main__":
         for index, arg in enumerate(args, start=1):
             print("{}: {}".format(index, arg))
         return args
+
+
+argument("Hello")
