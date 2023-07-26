@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+from __future__ import division
 
 
 def safe_print_division(a, b):
