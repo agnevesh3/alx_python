@@ -3,5 +3,5 @@ from add_0 import add
 
 if __name__ == "__main__":
     a = 1
-    b = 3
-add(a, b)
+    b = 2
+    add(a, b)
