@@ -13,6 +13,6 @@ if __name__ == "__main__":
 
 
 argument("Hello")
-argument("Hello", "Holberton")
-argument()
-argument(98, "battery", "street")
+##argument("Hello", "Holberton")
+# argument()
+# argument(98, "battery", "street")
