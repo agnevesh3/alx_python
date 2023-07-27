@@ -9,19 +9,10 @@ def argument(*args):
     for index, arg in enumerate(args, start=1):
         print("{}: {}".format(index, arg))
 
-    return args
+    return result
 
 
 if __name__ == "__main__":
     import sys
 
     argument(*sys.argv[1:])
-
-if __name__ == "__main__":
-    argument("Hello")
-if __name__ == "__main__":
-    argument("Hello", "Holberton")
-if __name__ == "__main__":
-    argument()
-if __name__ == "__main__":
-    argument(98, "battery", "street")
