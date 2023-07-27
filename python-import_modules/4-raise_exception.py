@@ -4,6 +4,3 @@ def raise_exception():
         print("Exception has been raised")
     except TypeError:
         print("Exception has been raised")
-
-
-raise_exception()
