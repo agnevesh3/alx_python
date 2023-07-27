@@ -17,8 +17,11 @@ if __name__ == "__main__":
 
     argument(*sys.argv[1:])
 
-
-argument("Hello")
-argument("Hello", "Holberton")
-argument()
-argument(98, "battery", "street")
+if __name__ == "__main__":
+    argument("Hello")
+if __name__ == "__main__":
+    argument("Hello", "Holberton")
+if __name__ == "__main__":
+    argument()
+if __name__ == "__main__":
+    argument(98, "battery", "street")
