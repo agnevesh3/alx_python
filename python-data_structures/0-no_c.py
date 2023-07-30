@@ -4,5 +4,5 @@ def no_c(my_string):
     for i in my_string:
         if i.lower() != "c":  # Convert the character to lowercase for comparison
             my_list.append(i)
-    result = print("{}".format(i), end="")
+    result = "".join(my_list)
     return result
