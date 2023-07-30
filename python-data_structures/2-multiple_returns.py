@@ -7,4 +7,4 @@ def multiple_returns(sentence):
     else:
         length = len(tup)
         first = None
-    result = print("Lengh: {} - First character: {}".format(length, first), end="")
+    return length, first
