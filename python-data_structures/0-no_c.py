@@ -8,6 +8,3 @@ def no_c(my_string):
                 my_list.remove(i)
     for i in my_list:
         print("{}".format(i), end="")
-
-
-no_c("chicago")
