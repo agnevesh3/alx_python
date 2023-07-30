@@ -10,6 +10,3 @@ def no_c(my_string):
     for i in my_list:
         print("{}".format(i), end="")
     return my_string
-
-
-no_c("chiCago")
