@@ -6,6 +6,3 @@ def no_c(my_string):
             my_list.append(i)
     for i in my_list:
         print("{}".format(i), end="")
-
-
-no_c("School")
