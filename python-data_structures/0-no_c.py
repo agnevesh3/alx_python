@@ -9,4 +9,4 @@ def no_c(my_string):
         my_list.remove("C")
     for i in my_list:
         result = print("{}".format(i), end="")
-    return result
+    return my_list
