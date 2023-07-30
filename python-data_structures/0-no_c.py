@@ -7,5 +7,7 @@ def no_c(my_string):
             if i == "C" or i == "c":
                 my_list.remove(i)
     for i in my_list:
-        print("{}".format(i))
-    return my_string
+        print("{}".format(i), end="")
+
+
+no_c("chicago")
