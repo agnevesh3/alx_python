@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-def print_sorted_dictionary(my_dict):
-    """Print sorted dictionary"""
-    keys = sorted(my_dict.keys())
-    for k in keys:
-        print("{}: {}".format(k, my_dict[k]))
+def update_dictionary(a_dictionary, key, value):
+    """Update or add key/value in a dictionary"""
+    a_dictionary[key] = value
 
 
 my_dict = {"a": "a", "b": "b", "c": "c", "d": "d", "e": "e"}
 key = "a"
 value = "A"
+
 new_dict = update_dictionary(my_dict, key, value)
-print_sorted_dictionary(new_dict)
-print("xx")
-print_sorted_dictionary(my_dict)
+
+# Print the updated dictionary and the old dictionary
+print("Updated Dictionary:", new_dict)
+print("Old Dictionary:", my_dict)
