@@ -4,12 +4,8 @@ def update_dictionary(a_dictionary, key, value):
     a_dictionary[key] = value
 
 
-my_dict = {"a": "a", "b": "b", "c": "c", "d": "d", "e": "e"}
-key = "a"
-value = "A"
-
-new_dict = update_dictionary(my_dict, key, value)
-
-# Print the updated dictionary and the old dictionary
-print("Updated Dictionary:", new_dict)
-print("Old Dictionary:", my_dict)
+def print_sorted_dictionary(my_dict):
+    """Print sorted dictionary"""
+    keys = sorted(my_dict.keys())
+    for k in keys:
+        print("{}: {}".format(k, my_dict[k]))
