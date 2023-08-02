@@ -23,18 +23,9 @@ class Square:
         Parameters:
             size (int): The size of the square.
         """
-        if isinstance(size, str):
-            try:
-                size = int(size)
-            except ValueError:
-                raise TypeError(
-                    "size must be an integer or a string representation of an integer."
-                )
-
         if not isinstance(size, int):
-            raise TypeError(
-                "size must be an integer or a string representation of an integer."
-            )
+            raise TypeError("size must be an integer.")
+        self.__size = size
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
