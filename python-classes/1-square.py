@@ -44,7 +44,3 @@ class Square:
             int: The area of the square.
         """
         return self.__size**2
-
-
-my_square_1 = Square(3)
-print("Area: {}".format(my_square_1.area()))
