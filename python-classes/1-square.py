@@ -23,15 +23,12 @@ class Square:
         Parameters:
             size (int): The size of the square.
         """
-        try:
-            if not isinstance(size, int):
-                raise TypeError("size must be an integer.")
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer.")
             self.__size = size
-            if size < 0:
-                raise ValueError("size must be >= 0")
+        if size < 0:
+            raise ValueError("size must be >= 0")
             self.__size = size
-        except (TypeError, ValueError) as e:
-            print(e)
 
     def area(self):
         """
