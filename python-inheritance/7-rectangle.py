@@ -98,9 +98,3 @@ class Rectangle(BaseGeometry):
             str: The rectangle description.
         """
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
-
-
-# Example usage:
-r = Rectangle(4, 5)
-print(r)  # Output: [Rectangle] 4/5
-print(r.area())  # Output: 20
