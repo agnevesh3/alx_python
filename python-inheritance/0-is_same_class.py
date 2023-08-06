@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This calass will check the type of data"""
 
 
 class TypeChecker:
