@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """This is an empty class"""
 
 
@@ -16,7 +17,7 @@ def custom_dir(obj):
 bg = BaseGeometry()
 attributes = custom_dir(bg)
 
-# Check the attributes and docstring
+"""Check the attributes and docstring"""
 expected_output = [
     "__class__",
     "__delattr__",
@@ -46,5 +47,3 @@ expected_output = [
 ]
 
 assert attributes == expected_output, f"Expected: {expected_output}\nGot: {attributes}"
-
-print(attributes)
