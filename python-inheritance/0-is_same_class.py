@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-"""This class will check the type of data"""
-
-
 class TypeChecker:
     """
     A class to check if an object is exactly an instance of a specified class.
+
+    This class provides a method, is_same_class, that checks if the given object is an instance
+    of the specified class. It uses the __class__ attribute of the object to get its class and
+    compares it with the specified class to determine if they match.
 
     Example usage:
     >>> checker = TypeChecker()
