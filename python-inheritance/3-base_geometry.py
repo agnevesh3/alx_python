@@ -1,26 +1,47 @@
 #!/usr/bin/python3
 
-"""This is an empty class"""
+"""
+This module contains the BaseGeometry class.
+
+The BaseGeometry class is an empty class that serves as a base for other geometry-related classes.
+"""
 
 
 class BaseGeometry:
-    """It does not return anything"""
+    """
+    A class representing a basic geometry.
 
-    pass
+    Attributes:
+        None
 
+    Methods:
+        None
 
-"""this will implement the dir"""
+    Usage:
+        This class can be inherited by other geometry-related classes to extend its functionality.
+    """
+
+    def __init__(self):
+        pass
 
 
 def custom_dir(obj):
-    """Custom implementation of dir() to sort attributes alphabetically"""
+    """
+    Custom implementation of dir() to sort attributes alphabetically.
+
+    Parameters:
+        obj (object): The object for which to get the attributes.
+
+    Returns:
+        list: A sorted list of attributes of the object.
+    """
     return sorted(dir(obj))
 
 
 bg = BaseGeometry()
 attributes = custom_dir(bg)
 
-"""Check the attributes and docstring"""
+# Check the attributes and docstring
 expected_output = [
     "__class__",
     "__delattr__",
@@ -50,3 +71,5 @@ expected_output = [
 ]
 
 assert attributes == expected_output, f"Expected: {expected_output}\nGot: {attributes}"
+
+print(attributes)
