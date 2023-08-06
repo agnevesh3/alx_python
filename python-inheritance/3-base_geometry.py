@@ -49,5 +49,3 @@ expected_output = [
 ]
 
 assert attributes == expected_output, f"Expected: {expected_output}\nGot: {attributes}"
-
-print(attributes)
