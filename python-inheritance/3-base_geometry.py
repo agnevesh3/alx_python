@@ -8,33 +8,13 @@ The BaseGeometry class is an empty class that serves as a base for other geometr
 
 
 class BaseGeometry:
-    """
-    A class representing a basic geometry.
+    """It does not return anything"""
 
-    Attributes:
-        None
-
-    Methods:
-        None
-
-    Usage:
-        This class can be inherited by other geometry-related classes to extend its functionality.
-    """
-
-    def __init__(self):
-        pass
+    pass
 
 
 def custom_dir(obj):
-    """
-    Custom implementation of dir() to sort attributes alphabetically.
-
-    Parameters:
-        obj (object): The object for which to get the attributes.
-
-    Returns:
-        list: A sorted list of attributes of the object.
-    """
+    """Custom implementation of dir() to sort attributes alphabetically"""
     return sorted(dir(obj))
 
 
