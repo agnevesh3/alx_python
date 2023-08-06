@@ -43,6 +43,9 @@ class BaseGeometry:
         """
 
 
+"""This class inherits from BaseGeometry class, and has width and height as variables"""
+
+
 class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         self.width = width
