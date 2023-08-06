@@ -1,6 +1,14 @@
 #!/usr/bin/python3
 # type_checker.py
 
+"""
+This module defines the type of attribute.
+
+
+Attributes:
+    obj, and a_class.
+"""
+
 
 class TypeChecker:
     """
