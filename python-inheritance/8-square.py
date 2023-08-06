@@ -19,7 +19,8 @@ class BaseGeometry:
         integer_validator(name, value): Validates the given integer value.
 
     Usage:
-        This class can be inherited by other geometry-related classes to extend its functionality.
+        This class can be inherited by other geometry-related
+        classes to extend its functionality.
     """
 
     def area(self):
@@ -27,7 +28,8 @@ class BaseGeometry:
         Raises an Exception indicating that area() is not implemented.
 
         Raises:
-            Exception: Always raises an exception with the message "area() is not implemented".
+            Exception: Always raises an exception with
+            the message "area() is not implemented".
         """
         raise Exception("area() is not implemented")
 
@@ -44,7 +46,8 @@ class BaseGeometry:
             ValueError: If the value is less than or equal to 0.
 
         Usage:
-            This method is used to validate integer values for specific attributes in derived classes.
+            This method is used to validate integer
+            values for specific attributes in derived classes.
         """
 
 
@@ -57,12 +60,15 @@ class Rectangle(BaseGeometry):
         __height (int): The private height of the rectangle.
 
     Methods:
-        __init__(self, width, height): Initializes a Rectangle instance with given width and height.
+        __init__(self, width, height): Initializes a Rectangle instance
+        with given width and height.
         area(): Calculates and returns the area of the rectangle.
-        __str__(self): Returns the rectangle description as "[Rectangle] <width>/<height>".
+        __str__(self): Returns the rectangle description as
+        "[Rectangle] <width>/<height>".
 
     Usage:
-        This class can be used to represent rectangles with positive integer width and height.
+        This class can be used to represent rectangles
+        with positive integer width and height.
     """
 
     def __init__(self, width, height):
