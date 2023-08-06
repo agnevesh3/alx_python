@@ -43,16 +43,43 @@ class BaseGeometry:
         """
 
 
-"""This class inherits from BaseGeometry class, and has width and height as variables"""
-
-
 class Rectangle(BaseGeometry):
+    """
+    A class representing a rectangle.
+
+    Attributes:
+        None
+
+    Methods:
+        __init__(self, width, height): Initializes a Rectangle instance with given width and height.
+        area(): Calculates and returns the area of the rectangle.
+
+    Usage:
+        This class can be used to represent rectangles with positive integer width and height.
+    """
+
     def __init__(self, width, height):
-        self.width = width
-        self.heigh = height
-        if not isinstance(width, height, int):
-            raise TypeError("{} must be an integer".format(width or height))
-        if width <= 0:
-            raise ValueError("{} must be greater than 0".format(width))
-        if height <= 0:
-            raise ValueError("{} must be greater than 0".format(height))
+        """
+        Initializes a Rectangle instance with given width and height.
+
+        Parameters:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
+
+        Raises:
+            TypeError: If width or height is not an integer.
+            ValueError: If width or height is less than or equal to 0.
+        """
+        self.__width = width
+        self.__height = height
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
+
+    def area(self):
+        """
+        Calculates and returns the area of the rectangle.
+
+        Returns:
+            int: The area of the rectangle.
+        """
+        return self.__width * self.__height
