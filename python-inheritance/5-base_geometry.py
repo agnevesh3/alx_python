@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This Module will rise an exception when area is not implemented"""
+
+
 class BaseGeometry:
     """
     A class representing a basic geometry.
