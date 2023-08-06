@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """This is an empty class"""
 
 
@@ -8,6 +7,17 @@ class BaseGeometry:
 
     pass
 
+
+def custom_dir(obj):
+    """Custom implementation of dir() to remove __init_subclass__ if present"""
+    attributes = dir(obj)
+    if "__init_subclass__" in attributes:
+        attributes.remove("__init_subclass__")
+    return attributes
+
+
+bg = BaseGeometry()
+attributes = custom_dir(bg)
 
 # Check the attributes and docstring
 expected_output = [
@@ -38,10 +48,6 @@ expected_output = [
     "__weakref__",
 ]
 
-bg = BaseGeometry()
-attributes = dir(bg)
-# Remove '__init_subclass__' from the list if it exists
-if "__init_subclass__" in attributes:
-    attributes.remove("__init_subclass__")
-
 assert attributes == expected_output, f"Expected: {expected_output}\nGot: {attributes}"
+
+print(attributes)
