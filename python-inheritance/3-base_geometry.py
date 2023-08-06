@@ -9,6 +9,9 @@ class BaseGeometry:
     pass
 
 
+"""this will implement the dir"""
+
+
 def custom_dir(obj):
     """Custom implementation of dir() to sort attributes alphabetically"""
     return sorted(dir(obj))
