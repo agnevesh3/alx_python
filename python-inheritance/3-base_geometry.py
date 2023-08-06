@@ -9,11 +9,8 @@ class BaseGeometry:
 
 
 def custom_dir(obj):
-    """Custom implementation of dir() to remove __init_subclass__ if present"""
-    attributes = dir(obj)
-    if "__init_subclass__" in attributes:
-        attributes.remove("__init_subclass__")
-    return attributes
+    """Custom implementation of dir() to sort attributes alphabetically"""
+    return sorted(dir(obj))
 
 
 bg = BaseGeometry()
@@ -49,3 +46,5 @@ expected_output = [
 ]
 
 assert attributes == expected_output, f"Expected: {expected_output}\nGot: {attributes}"
+
+print(attributes)
