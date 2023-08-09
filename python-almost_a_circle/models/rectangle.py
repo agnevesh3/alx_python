@@ -2,18 +2,14 @@
 
 
 class Base:
-    """
-    Base class for creating instances with an ID.
-    """
+    """The id is given and intial value of 0"""
 
     __nb_objects = 0
+    """ This module takes attribute of id"""
 
     def __init__(self, id=None):
-        """
-        Initialize a new Base instance.
-
-        Args:
-            id (int, optional): ID for the instance. If not provided, automatically generated.
+        """if the id attribute is None, the id will count progressively
+        otherwise the id will set to the number provided as attribute
         """
         if id is None:
             Base.__nb_objects += 1
@@ -39,26 +35,30 @@ class Rectangle(Base):
             id (int, optional): ID for the instance. If not provided, automatically generated.
         """
         Base.__init__(self, id)
-        self.__width = width
         if not isinstance(width, int):
             raise TypeError("width must be an integer.")
+        self.__width = width
         if width <= 0:
             raise ValueError("width must be > 0")
-        self.__height = height
+        self.__width = width
         if not isinstance(height, int):
             raise TypeError("height must be an integer.")
+        self.__height = height
         if height <= 0:
             raise ValueError("height must be > 0")
-        self.__x = x
+        self.__height = height
         if not isinstance(x, int):
             raise TypeError("x must be an integer.")
+        self.__x = x
         if x < 0:
             raise ValueError("x must be >= 0")
-        self.__y = y
+        self.__x = x
         if not isinstance(y, int):
             raise TypeError("y must be an integer.")
+        self.__y = y
         if y < 0:
             raise ValueError("y must be >= 0")
+        self.__y = y
 
     @property
     def width(self):
@@ -70,10 +70,6 @@ class Rectangle(Base):
         """Setter method to set the width of the rectangle."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer.")
-        self.__width = value
-
-    @width.setter
-    def width(self, value):
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
@@ -88,10 +84,6 @@ class Rectangle(Base):
         """Setter method to set the height of the rectangle."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer.")
-        self.__height = value
-
-    @height.setter
-    def height(self, value):
         if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
@@ -106,10 +98,6 @@ class Rectangle(Base):
         """Setter method to set the x-coordinate of the rectangle."""
         if not isinstance(value, int):
             raise TypeError("x must be an integer.")
-        self.__x = value
-
-    @x.setter
-    def x(self, value):
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
@@ -124,10 +112,6 @@ class Rectangle(Base):
         """Setter method to set the y-coordinate of the rectangle."""
         if not isinstance(value, int):
             raise TypeError("y must be an integer.")
-        self.__y = value
-
-    @y.setter
-    def y(self, value):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
