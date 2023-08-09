@@ -39,83 +39,52 @@ class Rectangle(Base):
             id (int, optional): ID for the instance. If not provided, automatically generated.
         """
         Base.__init__(self, id)
-        if not isinstance(width, int):
-            raise TypeError("width must be an integer.")
-        self.__width = width
-        if width <= 0:
-            raise ValueError("width must be > 0")
-        self.__width = width
-        if not isinstance(height, int):
-            raise TypeError("height must be an integer.")
-        self.__height = height
-        if height <= 0:
-            raise ValueError("height must be > 0")
-        self.__height = height
-        if not isinstance(x, int):
-            raise TypeError("x must be an integer.")
-        self.__x = x
-        if x < 0:
-            raise ValueError("x must be >= 0")
-        self.__x = x
-        if not isinstance(y, int):
-            raise TypeError("y must be an integer.")
-        self.__y = y
-        if y < 0:
-            raise ValueError("y must be >= 0")
-        self.__y = y
 
+        self._validate_and_set_attribute("width", "_width", width)
+        self._validate_and_set_attribute("height", "_height", height)
+        self._validate_and_set_attribute("x", "_x", x)
+        self._validate_and_set_attribute("y", "_y", y)
+
+    def _validate_and_set_attribute(self, name, private_attr, value):
+        self._validate_value(name, value, int)
+        self.__dict__[private_attr] = value
+
+    def _validate_value(self, name, value, expected_type):
+        if not isinstance(value, expected_type):
+            raise TypeError("{} must be an integer.".format(name))
+
+    # Getter and setter methods for width
     @property
     def width(self):
-        """Getter method to retrieve the width of the rectangle."""
-        return self.__width
+        return self._width
 
     @width.setter
     def width(self, value):
-        """Setter method to set the width of the rectangle."""
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer.")
-        if value <= 0:
-            raise ValueError("width must be > 0")
-        self.__width = value
+        self._validate_and_set_attribute("width", "_width", value)
 
+    # Getter and setter methods for height
     @property
     def height(self):
-        """Getter method to retrieve the height of the rectangle."""
-        return self.__height
+        return self._height
 
     @height.setter
     def height(self, value):
-        """Setter method to set the height of the rectangle."""
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer.")
-        if value <= 0:
-            raise ValueError("height must be > 0")
-        self.__height = value
+        self._validate_and_set_attribute("height", "_height", value)
 
+    # Getter and setter methods for x
     @property
     def x(self):
-        """Getter method to retrieve the x-coordinate of the rectangle."""
-        return self.__x
+        return self._x
 
     @x.setter
     def x(self, value):
-        """Setter method to set the x-coordinate of the rectangle."""
-        if not isinstance(value, int):
-            raise TypeError("x must be an integer.")
-        if value < 0:
-            raise ValueError("x must be >= 0")
-        self.__x = value
+        self._validate_and_set_attribute("x", "_x", value)
 
+    # Getter and setter methods for y
     @property
     def y(self):
-        """Getter method to retrieve the y-coordinate of the rectangle."""
-        return self.__y
+        return self._y
 
     @y.setter
     def y(self, value):
-        """Setter method to set the y-coordinate of the rectangle."""
-        if not isinstance(value, int):
-            raise TypeError("y must be an integer.")
-        if value < 0:
-            raise ValueError("y must be >= 0")
-        self.__y = value
+        self._validate_and_set_attribute("y", "_y", value)
