@@ -1,5 +1,6 @@
-# Import the Rectangle class from rectangle.py
 from rectangle import Rectangle
+
+"""This class inherit from Rectangle class in rectangle.py file"""
 
 
 class Square(Rectangle):
