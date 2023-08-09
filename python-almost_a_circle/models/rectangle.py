@@ -121,11 +121,15 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """This will print in stdout in the Rectangle instance with the character #-"""
+        """This will print in stdout of the Rectangle instance with the character #-"""
+        for _ in range(self.__y):
+            print()
+
         for i in range(self.__height):
-            print("#" * self.__width)
+            print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
+        """This will return the output format with values in the given place holders"""
         if self.__x is None:
             self.__x = 0
         if self.__y is None:
