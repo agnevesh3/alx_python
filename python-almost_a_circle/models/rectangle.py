@@ -41,21 +41,25 @@ class Rectangle(Base):
         Base.__init__(self, id)
         if not isinstance(width, int):
             raise TypeError("width must be an integer.")
+        self.__width = width
         if width <= 0:
             raise ValueError("width must be > 0")
         self.__width = width
         if not isinstance(height, int):
             raise TypeError("height must be an integer.")
+        self.__height = height
         if height <= 0:
             raise ValueError("height must be > 0")
         self.__height = height
         if not isinstance(x, int):
             raise TypeError("x must be an integer.")
+        self.__x = x
         if x < 0:
             raise ValueError("x must be >= 0")
         self.__x = x
         if not isinstance(y, int):
             raise TypeError("y must be an integer.")
+        self.__y = y
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
@@ -70,7 +74,6 @@ class Rectangle(Base):
         """Setter method to set the width of the rectangle."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer.")
-        self.__width = value
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
