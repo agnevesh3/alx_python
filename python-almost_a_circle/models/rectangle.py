@@ -1,4 +1,3 @@
-# Import the Rectangle class from rectangle.py
 from base import Base
 
 """This class will validate the values of rectangle width, height, x and y"""
