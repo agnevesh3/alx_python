@@ -70,6 +70,7 @@ class Rectangle(Base):
         """Setter method to set the width of the rectangle."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer.")
+        self.__width = value
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
@@ -84,6 +85,7 @@ class Rectangle(Base):
         """Setter method to set the height of the rectangle."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer.")
+        self.__height = value
         if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
@@ -98,6 +100,7 @@ class Rectangle(Base):
         """Setter method to set the x-coordinate of the rectangle."""
         if not isinstance(value, int):
             raise TypeError("x must be an integer.")
+        self.__x = value
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
@@ -112,6 +115,7 @@ class Rectangle(Base):
         """Setter method to set the y-coordinate of the rectangle."""
         if not isinstance(value, int):
             raise TypeError("y must be an integer.")
+        self.__y = value
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
