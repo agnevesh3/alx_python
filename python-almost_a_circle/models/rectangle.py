@@ -139,8 +139,9 @@ class Rectangle(Base):
             "Rectangle", self.id, self.__x, self.__y, self.__width, self.__height
         )
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """This method updates the attributes of the Rectangle instance."""
+        # This section will update the values of attributes
         num_args = len(args)
         if num_args >= 1:
             self.id = args[0]
@@ -152,3 +153,16 @@ class Rectangle(Base):
             self.__x = args[3]
         if num_args >= 5:
             self.__y = args[4]
+            # This part will update the attributes based on kwargs
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                elif key == "width":
+                    self.__width = value
+                elif key == "height":
+                    self.__height = value
+                elif key == "x":
+                    self.__x = value
+                elif key == "y":
+                    self.__y = value
