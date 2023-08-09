@@ -124,3 +124,13 @@ class Rectangle(Base):
         """This will print in stdout in the Rectangle instance with the character #-"""
         for i in range(self.__height):
             print("#" * self.__width)
+
+    def __str__(self):
+        if self.__x is None:
+            self.__x = 0
+        if self.__y is None:
+            self.__y = 0
+
+        return "[{}] ({}) {}/{} - {}/{}".format(
+            "Rectangle", self.id, self.__x, self.__y, self.__width, self.__height
+        )
