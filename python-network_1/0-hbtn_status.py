@@ -9,4 +9,4 @@ if __name__ == "__main__":
     print(f"    - type: {type(response.text)}")
     print(f"    - content: {response.text}")
 else:
-    print(f"Error: Unable to fetch data. Status code: {response.status_code}")
+    print(f"Error: Unable to fetch data. Status code")
